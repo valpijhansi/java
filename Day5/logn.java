@@ -6,6 +6,6 @@ class logn {
             count++;
             System.out.println("Hello lucky:" + i);
         }
-        System.out.println(count++);
+        System.out.println(count);
     }
 }
