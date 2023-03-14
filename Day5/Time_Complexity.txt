@@ -1,0 +1,28 @@
+                                                  Time Complexity
+Introduction:
+                    Time Complexity is defined as the amount of time taken by an algorithm to run, as a function of length of the input. It measures the time taken to execute each statement of code in an algorithm.
+
+                                                                        Types
+   
+1.	Constant Time Algorithms-O(1):
+                              An algorithm is said to have constant time with order O(1) when it is not dependent on the  input size .Irrespective of the input size n, the runtime will be always be the same.                         
+
+2.	Linear time-O(n):
+          
+                          An algorithm is said to have a linear time complexity when the running time increases linearly with the length of the input. when the function involves checking all the values in input data, with this order O(n).
+
+3.	Logarithmic Time-O(logn):
+                        This is one of the type time complexity when it reduces the size of the input data in each step. This indicates that the number of operations is not the same as the input. The number of operations gets reduced as the input size. 
+
+4.	Quadratic time-O(n^2):
+                   This algorithm is said to have a non-linear time complexity where the running time increases non-linearly(n^2) with the length of the input. Generally, nested loops come under this order where one loop takes O(n) and if the function involves a loop within a loop, then it goes for O(n)*O(n)=O(n^2) order. 
+
+5.	N log N Time Algorithms-O(n log n): 
+                               The running time increases in proportion to n log n of the input.Ex:8*log(8)=8*3=24.
+
+6.   Exponential time Algorithms-O( Math.pow(n,p)):
+                                 These Algorithms increases in proportion to some factor exponentioned by the input size.
+
+7.  Factorial Time Algorithms-O(n!):
+                      This class of algorithms has a run time proportional to the factorial of the input size.
+                            
