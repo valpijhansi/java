@@ -1,0 +1,10 @@
+                    
+Bubble sort:
+     
+           Bubble sort algorithm is known as the simplest sorting algorithm. In bubble sort algorithm,array is traversed from first element to last element.Here,current element is compared with the next element is greater than the next element,it is swapped.
+        
+                                                Space Complexity
+
+1.Constant Space-Complexity-O(1):It takes the same amount of the input size.
+2.Linear Space Complexity-O(n logn):Its complexity increases proportional to the input size and a logrithmic factor.
+3.Polynomial Space Complexity-O(n^2):Its complexity grows proportionally to the square of the inpt size.
