@@ -1,0 +1,24 @@
+class maxRow {
+    public static void main(String args[]) {
+
+        int a[][] = {
+                { 1, 3, 5, 7 },
+                { 2, 4, 6, 8 },
+                { 1, 2, 3, 4 },
+                { 5, 6, 7, 8 }
+        };
+        int maxsum = 0;
+        int index = -1;
+        for (int i = 0; i < a.length; i++) {
+            int sum = 0;
+            for (int j = 0; j < a.length; j++) {
+                sum += a[i][j];
+            }
+            if (sum > maxsum) {
+                maxsum = sum;
+                index = i;
+            }
+        }
+        System.out.print("row " + (index + 1) + " with sum:" + maxsum);
+    }
+}
