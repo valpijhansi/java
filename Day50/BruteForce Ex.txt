@@ -1,0 +1,12 @@
+Brute Force:
+      A Brute Force algorithm solves a problem through exhaustion.
+      It goes  through all possible choices until a solution found.
+      The time complexity  of brute force algorithm is often proportional to the input size.
+
+
+Exmaples:
+    1.Greedy Algorithm: A greedy Algorithm is one that makes the sequence of decision(in some order)such that once a given decision has been made,that decision is never reconsidered.
+    2.N-QueenProblem:The problem is to place 'n' queens(chess peices) on an "n" by n board so that no two queens are in the same row,column or diagonal.To slove this by backtracking process.
+    3.ClosestPair:There are som amny points are there in a multidimensional space we have to find ClosestPair in that one using Brute Force Algorithm.
+    4.Plugging-USBcable:Many times we will try one way,and if that doesn't work,flip it over and try another.Like wise,if we have a large number of keys but are unsure which one fits in particular lock,finally one can be oocured.
+    
