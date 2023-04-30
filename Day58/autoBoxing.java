@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 class autoBoxing {
     public static void main(String[] args) {
-        Character c = 'j';
-        char ch = c;
-        System.out.println(ch);
-        System.out.println(c);//
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(8);
+        System.out.println("Arraylist:" + list);
     }
 }
