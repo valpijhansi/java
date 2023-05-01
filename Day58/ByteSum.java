@@ -27,7 +27,8 @@ class ByteSum {
             carry = (byte) (temp / 10);
             j--;
         }
-        sum += carry;
+        if (carry > 0)
+            sum += carry;
         StringBuilder s = new StringBuilder(sum);
         s.reverse();
         return s;
