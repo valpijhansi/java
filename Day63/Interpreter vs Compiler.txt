@@ -1,0 +1,17 @@
+Interpreter : 
+            1. Translates program one statement at a time.
+            2. It takes less time to analyze the source code.
+		3. No object Code can be created
+		4. JavaScript,Python can use Interpreters.
+		5. Slower than compilers.
+
+
+
+
+Compiler :
+	      1.  Scans the entire program and Translates it as a whole into machine code.
+            2. It takes more time to analyze the source code.
+		3. Object Code can be created
+		4. Java,C,C++ can use Compilers.
+		5. Faster than Interpreters.
+

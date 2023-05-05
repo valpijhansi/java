@@ -1,0 +1,15 @@
+Throw :
+		
+	Throw keyword is used to create a custom error and used to throw an exception for a method.
+	
+	Syntax: throw new exception_class("error message");
+
+
+Throws :
+ 
+        Throws keyword indicates what exception type may be thrown by a method.
+	  
+	 Syntax: 
+                return_type method_name() throws exception_class_name {
+                // method code
+			}
