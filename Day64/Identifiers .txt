@@ -1,0 +1,13 @@
+Identifiers :
+              Indentifiers in java are symbolic names used for identification.
+		  They can be a class name,variable name, method name,pacakage name and consatant name.
+		
+
+
+
+Rules for Identifiers in java :
+						1.A valid identifier must have characters [A-Z]/[a-z]/[0-9] and underscore(_) or a Dollar($).
+						2.There should not be any spacein an identifier.
+						3.An Identifier should not contain a number at the starting.
+						4.Cannot use reserved words such as int,float,double etc....
+						5.cannot use query language keywords such as count,from etc....  
