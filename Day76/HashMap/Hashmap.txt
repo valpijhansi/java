@@ -1,0 +1,22 @@
+HashMap : 
+            The HashMap class of the java collections framework provides the functionality of the hash table data structure
+            It stores elements in key/value pairs.
+            Here,keys are unique identifiers used to associate each value on a map.
+            The HashMap class implements the Map interface.
+
+Syntax : HashMap<k,v> hm = new HashMap<>();
+
+Features of HashMap :
+                        1.Fast access time
+                        2.Uses hashing function
+                        3.Stores key-value pairs
+                        4.Thread-unsafe
+
+
+Operatins on HashMap :
+                        1.put();
+                        2.size();
+                        3.clone();
+                        4.clear();
+                        5.getKey();
+                        6.getValue;
