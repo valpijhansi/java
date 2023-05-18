@@ -1,0 +1,40 @@
+
+
+HashSet : 
+         A HashSet is a collection of items where every item is unique,and it is found in the java.util package.
+         It Implements the Set interface,backed by a hash table which is actually a HashMap instance
+         Duplicates values are not allowed.
+         Null elements are allowed.
+
+Methods of HashSet:
+                    add();
+                    clear();
+                    contains(object o);
+                    remove(object o);
+                    iterator();
+                    isEmpty();
+                    size();
+                    clone();
+                
+
+
+
+                                         HashMap vs HashSet
+
+                         HashMap                                      HashSet
+                
+                This is core difference among               HashSet implements Set interface.
+                them.HashMap implements map 
+                interface.
+
+                It store data in a form of                  It uses add(value) method for storing data
+                key->value pair.So it uses
+                put(key,value) methid for
+                storing data.
+
+                HashMap allows duplicate value              HashSet does not allow duplicate values.
+                but not duplicate keys.
+
+                It is faster tha hashset as                 It is slower than Hashmap
+                values are stored with unique
+                keys.
