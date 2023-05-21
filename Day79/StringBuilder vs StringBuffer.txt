@@ -1,0 +1,35 @@
+
+StringBuilder :
+                StringBuilder in Java represents a mutable sequence of characters. 
+                Since the String Class in Java creates an immutable sequence of characters, 
+                the StringBuilder class provides an alternative to String Class, as it creates a mutable sequence of characters. 
+                The function of StringBuilder is very much similar to the StringBuffer class, as both of them provide an alternative to String Class by making a mutable sequence of characters.
+
+StringBuffer : StringBuffer is a peer class of String that provides much of the functionality of strings. 
+               The string represents fixed-length, immutable character sequences while StringBuffer represents growable and writable character sequences. 
+
+
+
+
+                                     StringBuilder vs StringBuffer in Java
+
+
+                
+                StringBuffer Class	                        StringBuilder Class
+
+
+StringBuffer is present in Java.	                    StringBuilder was introduced in Java 5.
+StringBuffer is synchronized.                           StringBuilder is asynchronized. 
+
+
+This means that multiple threads cannot 
+call the methods of StringBuffer simultaneously.	   
+                                                        This means that multiple threads can call the methods of StringBuilder simultaneously.
+
+Due to synchronization, StringBuffer is called
+ a thread safe class.	                                 Due to its asynchronous nature, StringBuilder is not a thread safe class.
+
+
+Due to synchronization, 
+StringBuffer is lot slower than StringBuilder.          Since there is no preliminary check for multiple threads,
+                                                         StringBuilder is a lot faster than StringBuffer.
