@@ -1,0 +1,24 @@
+Generics in java :
+                 Generics means parameterized types. 
+                 The idea is to allow type (Integer, String, … etc., and user-defined types) to be a parameter to methods, classes, and interfaces. 
+                 Using Generics, it is possible to create classes that work with different data types. 
+                 An entity such as class, interface, or method that operates on a parameterized type is a generic entity.
+                 It does not accept primitive datatypes like int,float..etc
+
+
+
+Type Parameters in Java Generics
+
+The type parameters naming conventions are important to learn generics thoroughly. The common type parameters are as follows:
+
+    T – Type
+    E – Element
+    K – Key
+    N – Number
+    V – Value
+
+
+Advantages of Generics: 
+
+                      1. Code Reuse: We can write a method/class/interface once and use it for any type we want.
+                      2. Type Safety: Generics make errors to appear compile time than at run time (It’s always better to know problems in your code at compile time rather than making your code fail at run time). 
