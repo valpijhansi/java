@@ -6,6 +6,7 @@ public class House {
     public double getLength() {
         return length;
     }
+    
     public void setLength(double length) {
         this.length = length;
 
@@ -21,6 +22,10 @@ public class House {
     }
     public void setHeight(double height) {
         this.height = height;
+    }
+    @Override
+    public String toString() {
+        return "House [length=" + length + ", width=" + width + ", height=" + height + "]";
     }
 
 }

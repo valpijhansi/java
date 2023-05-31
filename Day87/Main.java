@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String args[]) {
         Human h1 = new Human();
@@ -19,6 +21,22 @@ public class Main {
         c2.setPrice(9_0000);
         Car cars[] ={c1,c2};
         h1.setCars(cars);
+        
+        Cat ct = new Cat();
+        ct.setName("tom");
+        ct.setSpeed(19.0);
+        
+        Object[] pets ={ct};
+        h1.setPets(pets);
+        
+        House hs = new House();
+        hs.setHeight(100.4);
+        House hs1 = new House();
+        hs1.setLength(34.7);
+
+        House houses[] = {hs,hs1};
+        //ct.setName(houses);
+        h1.setHouses(houses);
 
         System.out.println(h1);
 
@@ -29,14 +47,22 @@ class Human {
     String name;
     int age;
     Gender gender;
-    Car[] cars;
+     private Car[] cars;
     private Object[] pets;
+    private House[] houses;
     
     public String getName() {
         return name;
     }
-    public void setCars(Car[] cars) {
+   
+  
+    public void setGender(Gender female) {
+        this.gender = gender;
     }
+
+
+    // public void setCars(Car[] cars) {
+    //}
     public void setName( String name) {
         this.name = name;
     }
@@ -46,8 +72,11 @@ class Human {
     public void setAge(int age) {
         this.age = age;
     }
-    public Gender setGender(Gender female){
-       return this.gender = gender;
+    public Gender getGender() {
+        return gender;
+    }
+    public void setGender(){
+       this.gender = gender;
     }
 
     public  Object[] getPets() {
@@ -56,7 +85,21 @@ class Human {
     public void setPets(Object[] pets) {
         this.pets = pets;
     }
+    public void setCars(Car[] cars) {
+        this.cars = cars;
+    }
+    public House[] getHouses() {
+        return houses;
+    }
+    public void setHouses(House[] houses) {
+        this.houses = houses;
+    }
 enum Gender {
     MALE,FEMALE;
+}
+@Override
+public String toString() {
+    return "Human [name=" + name + ", age=" + age + ", gender=" + gender + ", cars=" + Arrays.toString(cars) + ", pets="
+            + Arrays.toString(pets) + "]";
 }
 }
