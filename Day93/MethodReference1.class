@@ -1,0 +1,21 @@
+@FunctionalInterface
+interface Rock {
+    int mock(int value1,int value2);
+}
+public class MethodReference {
+    public static void main(String args[]) {
+      Rock rock = Roast::sayHello;
+      rock.hello("Jaanu Papa");
+    rock.mock(4,3);
+    }
+}
+class Roast {
+    static public void syHello(String str) {
+        System.out.println("Hello"+str);
+        System.out.println("Uppercase"+str.toUpperCase());
+        System.out.println("LowerCase"+str.toLowerCase());
+        int a = 10;
+        int b = 20;
+        System.out.println("you are"+a+b);
+    }
+}
