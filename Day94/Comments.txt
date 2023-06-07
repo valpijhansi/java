@@ -1,0 +1,25 @@
+Comments : 
+          
+           Comments are the statements in a program that are not executed by the compiler and interpreter.
+
+
+Types of Comments:
+
+                Singleline Comment:
+                                   The single line comment is used to comment only one line(//).
+
+
+
+               MultiLine Comments:
+
+                                  The multi line comment is used to comment multiple lines of code. (/*..................*/) 
+
+
+
+
+              Documentation Comments :
+
+                                     The documentation comment is used to create documentation API.To create documentation API,we need to use javadoc tool.(/**.
+                                     *.................
+                                     *.........................
+                                    */).                                         
