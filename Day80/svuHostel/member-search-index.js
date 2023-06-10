@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"svuHostel","c":"svu","l":"svu()","url":"%3Cinit%3E()"}]
