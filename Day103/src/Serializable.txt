@@ -1,0 +1,13 @@
+
+
+
+Serialization : 
+
+                    Serialization is a mechanism of converting the state of an object into a byte stream. 
+                    It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+                    It is mainly used to travel object's state on the network (that is known as marshalling).
+                    The Serializable interface must be implemented by the class whose object needs to be persisted.
+
+DeSerialization:   
+
+                 The reverse operation of serialization is called deserialization where byte-stream is converted into an object.                    
