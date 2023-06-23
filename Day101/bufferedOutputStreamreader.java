@@ -2,7 +2,7 @@
     import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 
-public class bufferedOutputStreamReader {
+public class bufferedOutputStreamreader {
 
 
 
