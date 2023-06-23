@@ -1,4 +1,4 @@
-class BrElement {
+class BoundrayElement {
     public static void main(String args[]) {
         int a[][] = {
                 { 11, 12, 13 },
