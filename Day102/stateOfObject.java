@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class stateOfObjects {
+public class stateOfObject {
     public static void main(String[] args) throws Exception {
         FileOutputStream fi = new FileOutputStream ("rock.txt");
         PrintStream po = new PrintStream(fi);
