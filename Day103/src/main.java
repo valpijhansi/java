@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.io.*;
 
-public class main {
+ class main1 {
     public static void main(String[] args)throws IOException {
         FileInputStream fos = new FileInputStream("/home/jhansi/Documents/GitHub/java/Day102/rock.txt");
        // BufferedWriter br = new BufferedWriter(new OutputStreamWriter(fos));
