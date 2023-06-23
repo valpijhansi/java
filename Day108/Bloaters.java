@@ -1,4 +1,4 @@
-public class Bloaters {
+ class BloaterCode {
     /**
      * @param args
      */
