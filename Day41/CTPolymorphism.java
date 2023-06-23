@@ -3,8 +3,10 @@
 class CTPolymorphism {
     public static void main(String[] args) {
 
-        System.out.println(Main.multiply(12.5 , 13.6));
-        System.out.println(Main.multiply(2,3,6));
+       Main m = new Main();
+      // m.multiply(23,45);
+       m.multiply(2,4,6);
+       m.multiply(23.5, 35.0);
 
     }
 }

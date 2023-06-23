@@ -1,5 +1,5 @@
 class MissingElement {
-    public static void main(String args[]) {
+    public static void main(String[] rgs) {
         int n = 5;
         int A[] = { 11, 13, 12, 15 };
         for (int i = 1; i <= n; i++) {

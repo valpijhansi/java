@@ -1,5 +1,5 @@
 //Swaping two numbers without using another variable.
-class Twonumber {
+class Twonumber1 {
     public static void main(String args[]) {
         int a, b;
         a = 7;

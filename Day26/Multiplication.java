@@ -3,13 +3,13 @@
 class Multiplication {
     public static void main(String args[]) {
         int a[][] = {
-                { 1, 2, 3 },
-                { 6, 7, 8 }
+                {1, 2, 3},
+                {6, 7, 8}
         };
         int b[][] = {
-                { 1, 3 },
-                { 4, 5 },
-                { 6, 7 }
+                {1, 3},
+                {4, 5},
+                {6, 7}
         };
 
         int res[][] = new int[a.length][b[0].length];
@@ -20,13 +20,15 @@ class Multiplication {
 
                 for (int l = 0; l < a[0].length; l++) {
                     res[i][j] += a[i][l] * b[l][j];
+                    //System.out.println(res);
 
                 }
-             
-            
+              for(var x : res)
 
-         System.out.println();
-        
+                System.out.println(x);
+               
+
+            }
         }
     }
 }

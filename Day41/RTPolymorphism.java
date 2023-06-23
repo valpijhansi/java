@@ -17,7 +17,7 @@ class Birds {
 }
 
 class parrot extends Birds {
-    void fly() {
+    void fly() {2
         System.out.println("parrot fly in the sky");
     }
 }

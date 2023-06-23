@@ -1,4 +1,4 @@
-class duck{  //example of lambda 
+ public class duck{ 
     
     public static void main(String[] args) {
 
