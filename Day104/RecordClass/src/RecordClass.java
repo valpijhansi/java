@@ -1,6 +1,6 @@
 
 import java.util.Objects;
-public class RecordClass {
+class RecordClassEX {
     public static void main(String[] args) {
         person p1 = new person("Jhansi",21);
         //p1 = new person("Lokesh",23);
