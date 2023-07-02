@@ -2,7 +2,8 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Optional;
 
-public class IsPresent {
+public class IsPresentMthod
+{
     public static void main(String[] args) {
 
 
