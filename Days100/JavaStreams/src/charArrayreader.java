@@ -1,7 +1,6 @@
 import java.io.CharArrayReader;
 import java.io.FileInputStream;
-
-public class charArrayReader {
+ class CharArrayreader {
     public static void main(String[] args)throws Exception {
         char bytes[] = {'a','b','c','d','e','f','g','h','i','j'};
         CharArrayReader ch = new CharArrayReader(bytes);
