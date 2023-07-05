@@ -1,0 +1,13 @@
+Debugging :
+         
+         Debugging is one of the broadest topics in Software Engineering. 
+         It is a process to find subtle and remove bugs, and errors, and to understand the flow of the code as well. 
+         It is a must-have skill for all Java developers because debugging can help in locating the bugs which are not visible during code reviews. 
+         
+
+
+ Button Name 	      Short-Cut key	                     Purpose
+Resume	                F8	                     Execution of the program until the next breakpoint is reached.
+Terminate 	         Ctrl+F2	                  To stop the execution of code.
+Step Into	           F5	                      Executes the current line of code and goes to the next line of code. 
+Step Over	           F6	                      Executes the current line of code and goes back to the previous line.        
