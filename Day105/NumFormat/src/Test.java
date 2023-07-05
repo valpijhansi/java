@@ -1,4 +1,4 @@
- class Test1 {
+ class Greet {
     public static void main(String[] args) {
         greeting g = new greeting(){
             public void greeting(String name){
