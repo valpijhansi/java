@@ -1,0 +1,11 @@
+
+
+    UpCasting :
+               * upcasting is the typecasting of a child object to a parent object.
+               * It can be done implicitly.
+               * It gives us the flexibility to access the parent class members but it is not possible to access all the child class members.
+               * That is we can access the overriden Methods
+
+    DownCasting :
+                * Similarly,downcasting means the typecasting of a parent object to a child object.
+                * It can not be done implicitly.
