@@ -1,19 +1,24 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.jar.Attributes;
 import java.util.jar.Attributes.Name;
 import java.util.regex.Pattern;
 
  class Student1 {
+    static List<Student1> list = new ArrayList<>();
+    static Scanner scan = new Scanner(System.in);
+    
+
     String name;
 
-     int ID;
-
-    private static String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
-    
-   
-    double GPA;
+     static int ID;
+     double GPA;
+     
+     private static String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
 
     public int getID() {
         return ID;
@@ -31,12 +36,59 @@ import java.util.regex.Pattern;
      private Object getName() {
         return name;
     }
+    static int isIDValid() {
+        boolean flag = false;
+        int id;
+        if(list.size()==0) {
+            System.out.print("Enter the Student Ind: ");
+            id = scan.nextInt();
+        }
+        else{
+            do {
+                System.out.print("Enter Student Id: ");
+                id = scan.nextInt();
+                int count = 0;
+                for(var y : list) {
+                    if(y.ID == id) {
+                        System.out.println("Id already exists  ");
+                        count++;
+                    }
+                }
+                if(count==0) {
+                    flag = true;
+                }
+            }while(!flag);
+        }
+        return id;
+    }
 
 
-    static List<Student1> list = new ArrayList<>();
-    static Scanner scan = new Scanner(System.in);
-    private String id;
+    static String isValiEmail() {
+        boolean res;
+         do {
+            
+            int count = 0; 
+            System.out.println("Enter your gmail account : ");
+            String input = scan.next();
+            res = Pattern.matches(EMAIL_REGEX, input);
 
+            if (res)
+                System.out.println("You are loged in");
+
+            else {
+                System.out.println("Please enter a valid gmail");
+                count++;
+                if (count == 0) {
+                    res = true;
+                }
+            }
+
+        } while (!res);
+        return EMAIL_REGEX;
+    }
+
+
+    
     static void addStudent() {
         Student1 st = new Student1();
         System.out.println("Add the new Student data :");
@@ -44,8 +96,9 @@ import java.util.regex.Pattern;
         System.out.print("Name: ");
         st.name = scan.next();
 
-        System.out.print("ID: ");
-        st.ID = scan.nextInt();
+        // System.out.print("ID: ");
+        // st.ID = scan.nextInt();
+        // //st.isIDValid();
        
         System.out.print("Eamil: ");
         st.EMAIL_REGEX = scan.next();
@@ -104,11 +157,25 @@ import java.util.regex.Pattern;
     }
 
     static void sortedData() {
-        for(Student1 student : list) {
-            System.out.println(student);
-        
-        }
+         
+        for (int i=0; i<Student1.list.size(); i++)
+            System.out.println(Student1.list.get(i));
+ 
+        Collections.sort(Student1.list, new Student1.Sortbyroll());
+ 
+        System.out.println("\nSorted by rollno");
+        for (int i=0; i<Student1.list.size(); i++)
+            System.out.println(Student1.list.get(i));
+           
     }
+   static class Sortbyroll implements Comparator<Student1>
+{
+    
+    public int compare(Student1 a, Student1 b)
+    {
+        return a.ID - b.ID;
+    }
+}
 
 
 
@@ -131,7 +198,12 @@ class Main {
 
     public static void main(String[] args) {
          Scanner scanner = new Scanner(System.in);
+         
+
+
+       
             boolean result = true;
+           
             while (result) {
                 System.out.println("\n Enter the number to perfom an operation ");
                 System.out.println("1. Add Student");
@@ -145,6 +217,7 @@ class Main {
                 switch (choice) {
                     case 1:
                         Student1.addStudent();
+                        Student1.isIDValid();
                         break;
                     case 2:
                         System.out.print("Enter student name to search: ");
@@ -158,6 +231,7 @@ class Main {
                     case 4:
                           System.out.println("enter the name to sort the data");
                           String name1 = scanner.next();
+                          Student1.sortedData();
 
                     case 5:
                         result = false;
