@@ -13,15 +13,25 @@ import java.util.regex.Pattern;
     static Scanner scan = new Scanner(System.in);
     
 
+   
     String name;
 
-     static int ID;
-     double GPA;
+      int ID;
+      double GPA;
+    
      
      private static String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
 
     public int getID() {
         return ID;
+    }
+
+    public double getGPA() {
+        return GPA;
+    }
+
+     void setGPA(double gPA) {
+       this.GPA = gPA;
     }
 
     public void setID(int id) {
@@ -40,7 +50,7 @@ import java.util.regex.Pattern;
         boolean flag = false;
         int id;
         if(list.size()==0) {
-            System.out.print("Enter the Student Ind: ");
+            System.out.print("Enter the Student Id: ");
             id = scan.nextInt();
         }
         else{
@@ -62,18 +72,21 @@ import java.util.regex.Pattern;
         return id;
     }
 
-
-    static String isValiEmail() {
+    static String isValidEmail() {
         boolean res;
+             String input ;
+
+       
          do {
             
             int count = 0; 
-            System.out.println("Enter your gmail account : ");
-            String input = scan.next();
+            System.out.print("Enter your gmail account : ");
+             input = scan.next();
             res = Pattern.matches(EMAIL_REGEX, input);
 
-            if (res)
-                System.out.println("You are loged in");
+            if (res){
+
+            }
 
             else {
                 System.out.println("Please enter a valid gmail");
@@ -84,35 +97,54 @@ import java.util.regex.Pattern;
             }
 
         } while (!res);
-        return EMAIL_REGEX;
+        return input;
     }
+
+    static double IsvalidGPA() {
+        boolean res = false;
+        double GPA;
+        if(list.size()==0){
+        System.out.print("Enter the GPA : ");
+        GPA =  scan.nextDouble();
+        }
+      else{
+          do {
+             System.out.print("Enter the GPA: ");
+             GPA =scan.nextDouble();
+            int count = 0;
+            for(var marks :list)
+              if(marks.GPA == GPA)
+              System.out.println("you entered valid one");
+              count++;
+              if(count == 0) {
+                    res = true;
+                }
+            }while(!res);
+
+        }
+        return GPA;
+    }
+
+   
+
+
 
 
     
-    static void addStudent() {
+    static void addStudent(int id,String name,String EMAIL_REGEX,double gpa) {
         Student1 st = new Student1();
         System.out.println("Add the new Student data :");
 
         System.out.print("Name: ");
         st.name = scan.next();
-
-        // System.out.print("ID: ");
-        // st.ID = scan.nextInt();
-        // //st.isIDValid();
-       
-        System.out.print("Eamil: ");
-        st.EMAIL_REGEX = scan.next();
         
-        if (isValidEmail(EMAIL_REGEX)) {
-            
-            System.out.println("It is valid one");
-        } else {
-            System.out.println("Invalid email format. Please try again.");
-        }
-
-        System.out.print("GPA: ");
-        st.GPA = scan.nextDouble();
-
+        //System.out.println("Enter the mail Id : ");
+        
+        isValidEmail(EMAIL_REGEX);
+        
+        System.out.print("Enter GPA :");
+        scan.nextDouble();
+       
         list.add(st);
     }
 
@@ -123,18 +155,21 @@ import java.util.regex.Pattern;
 
 
 
-    static Student1 searchStudent(String name) {
-        Student1 st = new Student1();
-        for (Student1 x : list) {
-            if (x.getName().equals(st.name)) {
-                System.out.println("Student data found");
-                return x;
-            } else {
-                System.out.println("student data not found");
+    static void searchStudent(String name) {
+        
+        int count = 0;
+        for (var x : list) {
+            if (x.name.equalsIgnoreCase(name)||x.name.contains(name)||x.name.toLowerCase().contains(name)) {
+                System.out.println(x);
+                count++;
+                break;
+            } 
+            if(count == 0) {
+                System.out.println("Data not found");
             }
 
         }
-        return null;
+        
 
     }
 
@@ -184,7 +219,7 @@ import java.util.regex.Pattern;
         return "Student1{" +
                 "name='" + name + '\'' +
                 ", ID=" + ID +
-                ", Email_RGEX='" + EMAIL_REGEX + '\'' +
+                ", Email_RGEX='" + EMAIL_REGEX+ '\'' +
                 ", GPA=" + GPA +
                 
                 '}';
@@ -216,13 +251,20 @@ class Main {
 
                 switch (choice) {
                     case 1:
+                    // int id  = Student1.isIDValid();
+                    // String name = "haritha";
+                    // String email = Student1.isValidEmail();
+                    // double gpa = Student1.IsvalidGPA();
+
                         Student1.addStudent();
-                        Student1.isIDValid();
+                         
+                        // Student1.IsvalidGPA();
+                      
                         break;
                     case 2:
                         System.out.print("Enter student name to search: ");
-                        String name = scanner.next();
-                        Student1.searchStudent(name);
+                        String name1 = scanner.next();
+                        Student1.searchStudent(name1);
 
                         break;
                     case 3:
@@ -230,7 +272,7 @@ class Main {
                         break;
                     case 4:
                           System.out.println("enter the name to sort the data");
-                          String name1 = scanner.next();
+                          String name2 = scanner.next();
                           Student1.sortedData();
 
                     case 5:
