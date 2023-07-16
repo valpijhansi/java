@@ -34,9 +34,11 @@ public class Main {
                     System.out.println("First create an account");
                 else
                     ba.display();
-            }
+            } else if(choice==5) {
+                return;
 
-
+            }else
+                System.out.println("Enter valid choice: ");
         }
     }
 }

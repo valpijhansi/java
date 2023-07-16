@@ -49,7 +49,7 @@ public class BankAccount {
     public void deposit() {
         System.out.println("Deposit valid amount: ");
         double amt = scan.nextDouble();
-        //this.balance = scan.nextDouble();
+        this.balance += amt;
         if(amt>0)
             System.out.println("It is valid amount");
         else
