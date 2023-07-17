@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 
 public class BankAccount {
     Scanner scan = new Scanner(System.in);
-    String   FullName;
-    String accNum;
-    TypeOfAccount typeOfAccount;
-    double balance;
+    private String   FullName;
+    private String accNum;
+   private  TypeOfAccount typeOfAccount;
+    private double balance;
 
     public String getFullName(String fname, String lname) {
         return fname + lname;
@@ -44,20 +44,9 @@ public class BankAccount {
         this.typeOfAccount = typeOfAccount;
     }
 
-
-
-    public void deposit() {
-        System.out.println("Deposit valid amount: ");
-        double amt = scan.nextDouble();
-        this.balance += amt;
-        if(amt>0)
-            System.out.println("It is valid amount");
-        else
-            throw new InputMismatchException("Deposit sufficient amount");
-    }
-
     public Object getName() {
-        return 0;
+        String str = " ";
+        return str;
     }
 
 
@@ -84,21 +73,39 @@ public class BankAccount {
         this.FullName = fullName;
         System.out.println(fullName);
         isvalidFullName(fname,lname);
+
+        String accountNo = getAccountNumber();
+        setAccNum(accountNo);
+
+        String name = " ";
+
     }
 
 
 
     String getAccountNumber() {
         String accountNo = "";
-        System.out.println("Enter Account number");
-        accNum = scan.next();
-        this.accNum = accNum;
+
         for(int i=0;i<11;i++) {
           int x = (int)  Math.floor(Math.random() * 10);
           accountNo += String.valueOf(x);
         }
         isValidAccountNum(accNum);
         return accountNo;
+    }
+    public void deposit() {
+        System.out.println("Deposit valid amount: ");
+        double amount = scan.nextDouble();
+
+        if(isValidDepositAmt(amount)) {
+            this.balance += amount;
+            System.out.println("Rs. " + amount + " has been successfully deposited");
+            return;
+        }else
+            throw new InputMismatchException("Deposit sufficient amount");
+    }
+    private boolean isValidDepositAmt(double amount){
+        return amount>0;
     }
 
 
@@ -107,15 +114,27 @@ public class BankAccount {
         System.out.println("Please enter amount how much you want: ");
 
         double amount = scan.nextDouble();
-        this.balance =  amount;
-        if(amount > 500 && amount <= 5000) 
-            System.out.println("your transaction is Successfull Rs:"+amount);
-        else 
-            throw new InputMismatchException("Amount is not sufficient");
+
+        if(isValidWithdrawAmount()) {
+
+            System.out.println("Enter valid withdrawal amount");
+            return;
+        }
+        if(isValidWithdrawAmount()){
+            System.out.println("Amount is not sufficient");
+            return;
+        }
+        this.balance -= amount;
+        System.out.println("Your transaction is successful..!");
+
 
 
 
     }
+    private boolean isValidWithdrawAmount(){
+        return this.getBalance()<=0;
+    }
+
     public void display() {
 
         System.out.println(this);

@@ -1,5 +1,6 @@
 package BankAccount;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -16,29 +17,45 @@ public class Main {
             System.out.println("Enter your choice: ");
             int choice = sc.nextInt();
 
-            if (choice == 1) {
-                ba.createAccount();
-            } else if (choice == 2) {
-                if (ba.getName().equals(""))
-                    System.out.println("Create an account");
-                else
-                    ba.deposit();
+            switch (choice) {
+                case 1:
+                    ba.createAccount();
+                    break;
+                case 2:
+                    if (ba.getName().equals("")) {
+                        printErrorMsg();
+                    } else
+                        ba.deposit();
+                    break;
 
-            } else if (choice == 3) {
-                if (ba.getName().equals(""))
-                    System.out.println("First create an account");
-                else
-                    ba.withdarw();
-            } else if (choice == 4) {
-                if (ba.getName().equals(" "))
-                    System.out.println("First create an account");
-                else
-                    ba.display();
-            } else if(choice==5) {
-                return;
+                case 3:
 
-            }else
-                System.out.println("Enter valid choice: ");
+                    if (ba.getName().equals(""))
+                        printErrorMsg();
+                    else
+                        ba.withdarw();
+                    break;
+                case 4:
+                    if (ba.getName().equals("")) {
+                      printErrorMsg();
+                    } else
+                        ba.display();
+
+              case 5:
+                  System.out.println("Exit");
+                  break;
+
+
+                default:
+                    System.out.println("Invalid Operation ");
+                    return;
+
+            }
+
         }
+
+    }
+    private static void printErrorMsg(){
+        System.out.println("First create an account:");
     }
 }
