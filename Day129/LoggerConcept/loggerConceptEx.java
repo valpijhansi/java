@@ -1,18 +1,16 @@
 package LoggerConcept;
 
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import java.util.logging.*;
 
 public class loggerConceptEx {
-    static final Logger LOGGER = Logger.getLogger("Rock");
 
     public static void main(String[] args) throws IOException {
+        final Logger LOGGER = Logger.getLogger("Rock");
+
         FileHandler file = new FileHandler("my-data.log");
         file.setLevel(Level.CONFIG);
-        file.setFormatter(new SimpleFormatter());
+        file.setFormatter(new XMLFormatter());
         LOGGER.addHandler(file);
         LOGGER.setLevel(Level.CONFIG);
         LOGGER.config("Configuration done successfully");
