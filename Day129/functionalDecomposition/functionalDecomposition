@@ -1,0 +1,10 @@
+FunctionalDecomposition:
+* It is a Method of analysis that dissects a complex process in order to examine it's individual elements.
+* A function means is task in a larger process whereby decomposition breaks down that process into smaller,easier to comprehend units.
+* It is a problem solving tool used in several context,from business and industry to computer programming and AI.
+
+Steps involved in FunctionalDecomposition:
+1.Find the basic function.
+2.List essential sub-functions.
+3.List the next tier of sub-functions.
+4.Inspect the diagram.
