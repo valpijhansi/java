@@ -1,0 +1,4 @@
+AssertionError in Java :
+* An assert in java is a statement that is used for achieving assertion in java.
+* It is used primarily with boolean expression in java for testing purposes.
+* By default it is in disable mode we have to enable by using commonds then only it throws an error
